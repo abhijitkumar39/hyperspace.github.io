@@ -495,6 +495,203 @@ h1 em {
 
 .footer a { color: var(--ink); }
 
+.switcher {
+	display: grid;
+	grid-template-columns: minmax(220px, 280px) 1fr;
+	gap: 1rem;
+	align-items: stretch;
+}
+
+.switcher-tabs {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+}
+
+.switcher-tabs button,
+.lane-tabs button,
+.steps button,
+.brand-grid button {
+	font: inherit;
+	cursor: pointer;
+	text-align: left;
+	color: inherit;
+	background: var(--card);
+	border: 1px solid var(--line);
+}
+
+.switcher-tabs button {
+	display: grid;
+	gap: 0.1rem;
+	padding: 0.85rem 1rem;
+	border-radius: 16px;
+}
+
+.switcher-tabs button span,
+.switcher-tabs button small {
+	font-family: var(--mono);
+	font-size: 0.72rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.switcher-tabs button strong {
+	font-size: 1.05rem;
+	font-weight: 500;
+}
+
+.switcher-tabs button[aria-selected="true"],
+.lane-tabs button[aria-selected="true"],
+.steps button[aria-selected="true"],
+.brand-grid button[aria-selected="true"] {
+	background: var(--ink);
+	color: #f6f1e7;
+	border-color: var(--ink);
+}
+
+.switcher-tabs button[aria-selected="true"] span,
+.switcher-tabs button[aria-selected="true"] small {
+	color: var(--lime);
+}
+
+.stage-card {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 28px;
+	padding: clamp(1.3rem, 3vw, 2.2rem);
+	min-height: 100%;
+}
+
+#panel-xyz {
+	border-style: dashed;
+	background:
+		repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(22, 23, 19, 0.03) 10px, rgba(22, 23, 19, 0.03) 11px),
+		var(--card);
+}
+
+.stage-kicker,
+.dock-kicker {
+	margin: 0 0 0.6rem;
+	font-family: var(--mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--accent);
+}
+
+.stage-card h3 {
+	margin: 0;
+	font-family: var(--serif);
+	font-size: clamp(2.4rem, 4vw, 3.6rem);
+	font-weight: 400;
+	letter-spacing: -0.03em;
+	line-height: 0.95;
+}
+
+.stage-company {
+	max-width: 40rem;
+	color: var(--muted);
+}
+
+.stage-card ul {
+	margin: 0.4rem 0 0;
+	padding-left: 1.1rem;
+}
+
+.stage-card li { margin: 0.4rem 0; }
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin: 1.2rem 0 0;
+}
+
+.chips span {
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	padding: 0.25rem 0.65rem;
+	font-family: var(--mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.04em;
+}
+
+.board {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 28px;
+	padding: 1rem;
+}
+
+.lane-tabs,
+.steps {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+}
+
+.lane-tabs { margin-bottom: 1rem; }
+
+.lane-tabs button,
+.steps button {
+	border-radius: 999px;
+	padding: 0.55rem 0.9rem;
+}
+
+.brand-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.55rem;
+	min-height: 9rem;
+}
+
+.brand-grid[hidden] { display: none; }
+
+.brand-grid button {
+	border-radius: 16px;
+	padding: 1rem 0.9rem;
+	font-weight: 500;
+	font-size: 1.05rem;
+}
+
+.brand-grid button:hover,
+.switcher-tabs button:hover,
+.lane-tabs button:hover,
+.steps button:hover {
+	border-color: var(--accent);
+}
+
+.ai-note p {
+	margin: 0 0 1rem;
+	max-width: 42rem;
+	color: var(--muted);
+}
+
+.dock {
+	margin-top: 0.8rem;
+	padding: 1rem 1.1rem;
+	border-radius: 18px;
+	background: var(--ink);
+	color: #f6f1e7;
+}
+
+.dock p { margin: 0; }
+
+.dock-kicker { color: var(--lime); }
+
+#dock-copy { margin-top: 0.35rem; }
+
+.steps { margin-top: 0.8rem; }
+
+.switcher-tabs button:focus-visible,
+.lane-tabs button:focus-visible,
+.steps button:focus-visible,
+.brand-grid button:focus-visible {
+	outline: 2px solid var(--lime);
+	outline-offset: 3px;
+}
+
 @media (max-width: 860px) {
 	.menu { display: inline-flex; }
 
@@ -543,6 +740,17 @@ h1 em {
 	.project-wide .project-go { margin-left: 0; }
 
 	.footer { flex-direction: column; }
+
+	.switcher,
+	.brand-grid { grid-template-columns: 1fr; }
+
+	.switcher-tabs {
+		flex-direction: row;
+		overflow-x: auto;
+		padding-bottom: 0.2rem;
+	}
+
+	.switcher-tabs button { min-width: 9.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
