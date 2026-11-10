@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Abhijit Kumar — Data systems for an AI shift</title>
-	<meta name="description" content="Abhijit Kumar has built collection pipelines, ETL, and APIs since 2019, including gas, parking, and listing data for Way.com. The current company card is a placeholder.">
+	<title>Abhijit Kumar — Data systems that train models</title>
+	<meta name="description" content="Abhijit Kumar has spent seven years turning outside data into something a product can trust: ERP records, gig-work feeds, and national scrapes whose clean tables trained an in-house LLM.">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/portfolio.css">
+	<link rel="stylesheet" href="assets/css/portfolio.css?v=4">
 </head>
 <body>
 	<a class="skip" href="#path">Skip to the path</a>
@@ -22,7 +22,7 @@
 		</button>
 		<nav id="site-nav" class="nav-links">
 			<a href="#path">Path</a>
-			<a href="#sources">Sources</a>
+			<a href="#sources">Scrape</a>
 			<a href="#contact">Contact</a>
 			<a class="nav-github" href="https://github.com/abhijitkumar39" target="_blank" rel="noopener">GitHub</a>
 		</nav>
@@ -34,10 +34,10 @@
 				<p class="eyebrow"><span class="dot" aria-hidden="true"></span> Bengaluru · since 2019</p>
 				<h1>Abhijit <em>Kumar</em></h1>
 				<p class="role">I am a <span id="role" aria-live="polite">data engineer</span><span class="caret" aria-hidden="true"></span></p>
-				<p class="lede">Seven years on the part of data products people forget until it breaks: collectors, ETL, and the API in front. The public record is SARCI, Awign, Way.com, and DecisionPoint. The aim now is applied AI. The current employer is still a blank card.</p>
+				<p class="lede">Seven years turning someone else's messy data into a system that can be asked a question. ERP records, then gig-work feeds, then national scrapes whose clean tables trained our own model. SARCI, Awign, Way.com, DecisionPoint. The aim now is applied AI. The current employer is still a blank card.</p>
 				<div class="hero-actions">
 					<a class="btn btn-primary" href="#path">Open the path</a>
-					<a class="btn btn-ghost" href="#sources">See the sources</a>
+					<a class="btn btn-ghost" href="#sources">See the scrape</a>
 				</div>
 			</div>
 
@@ -74,13 +74,14 @@
 				<li>Pub/Sub</li>
 				<li>AWS</li>
 				<li>APIs</li>
+				<li>LLM data</li>
 			</ul>
 		</section>
 
 		<section id="path" class="section">
 			<div class="section-head">
 				<p class="eyebrow">Path</p>
-				<h2>Click a company. The rest stays put.</h2>
+				<h2>Four companies. One kind of work.</h2>
 			</div>
 
 			<div class="switcher" data-switcher>
@@ -126,11 +127,12 @@
 					<article class="stage-card" role="tabpanel" id="panel-dp" aria-labelledby="tab-dp" hidden>
 						<p class="stage-kicker">Aug 2023 – still the latest role on LinkedIn · Software engineer</p>
 						<h3>DecisionPoint</h3>
-						<p class="stage-company">Enterprise mobility for warehouses, stores, and delivery routes: proof of delivery, RFID, and the devices people carry on the floor.</p>
+						<p class="stage-company">Enterprise mobility for warehouses, stores, and delivery routes. Same muscle as the scrape years, pointed at the floor: an outside system, a pipeline that stays current, and an API something else can ask.</p>
 						<ul>
-							<li>REST APIs with JWT, plus the schema and the queries behind them.</li>
-							<li>Airflow pipelines in Python, and Pub/Sub where a stream had to stay current.</li>
-							<li>Freshservice, Field Nation, and Netreo tied into internal workflows. Deploys on Linux EC2.</li>
+							<li>REST APIs with JWT for proof of delivery, RFID scans, and the devices people carry on a route.</li>
+							<li>Schema and queries so a scan, a stop, and a delivery stayed one story from the device to the warehouse.</li>
+							<li>Airflow in Python for the batch work. Google Pub/Sub where an event could not wait for the next run.</li>
+							<li>Freshservice, Field Nation, and Netreo folded into those workflows. Services shipped on Linux EC2.</li>
 						</ul>
 						<p class="chips"><span>Python</span><span>Airflow</span><span>Pub/Sub</span><span>JWT</span><span>EC2</span></p>
 					</article>
@@ -138,22 +140,25 @@
 					<article class="stage-card" role="tabpanel" id="panel-way" aria-labelledby="tab-way">
 						<p class="stage-kicker">Jun 2022 – Aug 2023 · Software engineer · lead</p>
 						<h3>Way.com</h3>
-						<p class="stage-company">A US driver app for parking, car washes, gas cashback, and EV charging. The product is only as good as the locations and prices underneath it.</p>
+						<p class="stage-company">A US driver app for parking, car washes, gas cashback, and EV charging. The app is only as true as the prices and places under it. Those same tables later taught our own model.</p>
 						<ul>
-							<li>Led the collection pipeline for gas prices, car washes, and parking spots.</li>
-							<li>ETL into storage the rest of the product could query, and APIs in front of that store.</li>
-							<li>A live dashboard for success rate, errors, and throughput. Spiders shipped on a serverless setup.</li>
+							<li>Led ingestion for gas prices, car-wash locations, parking inventory, and chargers across the national brands below.</li>
+							<li>One Scrapy project per site, kicked off by Scrapyd, with rotating proxies when a brand started blocking the datacenter.</li>
+							<li>Raw pages in MongoDB, then ETL into typed prices, hours, and coordinates. APIs in front. A dashboard on success, errors, and lag.</li>
+							<li>The cleaned rows were the training set for an in-house LLM, so it answered from our prices and places, not from the public web.</li>
 						</ul>
-						<p class="chips"><span>Python</span><span>Scrapy</span><span>ETL</span><span>MongoDB</span><span>APIs</span></p>
+						<p class="chips"><span>Python</span><span>Scrapy</span><span>ETL</span><span>MongoDB</span><span>LLM data</span></p>
 					</article>
 
 					<article class="stage-card" role="tabpanel" id="panel-awign" aria-labelledby="tab-awign" hidden>
 						<p class="stage-kicker">Feb 2021 – May 2022 · Data engineer · Bengaluru</p>
 						<h3>Awign</h3>
-						<p class="stage-company">A gig-work platform. Enterprises hand over on-site and remote tasks, and a large worker network across India carries them out.</p>
+						<p class="stage-company">A gig-work platform. Enterprises hand over on-site and remote tasks, and a worker network across India carries them out. This is where "get someone else's data in, every day" became the job.</p>
 						<ul>
-							<li>Ran ETL from extract through load, and kept the jobs reliable enough to repeat.</li>
-							<li>Turned useful sources into automated collectors instead of one-off pulls.</li>
+							<li>Owned ETL from extract through load, so a client feed became a table ops could actually use.</li>
+							<li>Replaced one-off pulls with collectors on a schedule, and made a failed job obvious instead of silent.</li>
+							<li>Shaped the data behind stuck tasks, free workers, and client feeds that had gone stale.</li>
+							<li>The spiders at Way were this habit at national scale: outside data, on time, clean enough for the next system.</li>
 						</ul>
 						<p class="chips"><span>Python</span><span>ETL</span><span>Automation</span></p>
 					</article>
@@ -161,10 +166,12 @@
 					<article class="stage-card" role="tabpanel" id="panel-sarci" aria-labelledby="tab-sarci" hidden>
 						<p class="stage-kicker">Jul 2019 – Feb 2021 · Software engineer · Bengaluru</p>
 						<h3>SARCI</h3>
-						<p class="stage-company">Process automation for Indian businesses: ERP workflows, inventory, and the paperwork that usually sits between two departments.</p>
+						<p class="stage-company">Process automation for Indian businesses. ERP workflows, inventory, and the paperwork that sits between two departments. If the source record is wrong, every model downstream is confidently wrong. This is where that lesson started.</p>
 						<ul>
-							<li>Sat with clients on where their ERP was failing and shaped the fix.</li>
-							<li>Built an inventory system from stock on hand through to procurement planning.</li>
+							<li>Sat with clients on the ERP steps that failed between teams, and shaped the fix with them.</li>
+							<li>Built inventory from stock on hand through procurement, so buying stopped living in a spreadsheet.</li>
+							<li>Automated the handoff that used to be an email: a record left one team and arrived in the next.</li>
+							<li>Left operational truth in a shape a later pipeline could trust. Every collect after this one starts there.</li>
 						</ul>
 						<p class="chips"><span>ERP</span><span>Inventory</span><span>Automation</span></p>
 					</article>
@@ -174,9 +181,18 @@
 
 		<section id="sources" class="section">
 			<div class="section-head">
-				<p class="eyebrow">Sources</p>
-				<h2>Famous names from the collector trees. Click one.</h2>
+				<p class="eyebrow">The scrape</p>
+				<div>
+					<h2>National brands in. Our own model out.</h2>
+					<p class="section-lede">These are the sites the spiders actually ran. Click one. Fuel, parking, homes, and jobs all took the same path, and the clean rows were what we trained on.</p>
+				</div>
 			</div>
+
+			<ol class="beats">
+				<li><strong>Collect</strong> Scrapy on a schedule. Rotating proxies when a brand started blocking. One project per site, not a one-off script.</li>
+				<li><strong>Clean</strong> Raw pages landed in MongoDB. ETL typed the prices, places, hours, and listing text an API could serve.</li>
+				<li><strong>Train</strong> Those tables were the corpus for an in-house LLM. It learned our prices and places, then answered from that store.</li>
+			</ol>
 
 			<div class="board" data-board>
 				<div class="lane-tabs" role="tablist" aria-label="Source lanes">
@@ -217,7 +233,8 @@
 					<button type="button" data-brand="dice">Dice</button>
 				</div>
 				<div class="brand-grid ai-note" data-lane-panel="ai" hidden>
-					<p>These feeds are repeated, timestamped, and tied to a place: a price, an open bay, a listing that changed. That is the raw material an applied-AI role actually starts from. The model work in public so far is a Telegram reminder bot that replies with a local Ollama model.</p>
+					<p>The model was not trained on a generic crawl. It learned our tables: a pump price that moved through the day, a parking bay that was still open, a home listing that changed, a job post that vanished. Ask where gas is cheaper, or which builder still has inventory, and the answer comes from that store.</p>
+					<p>The public cousin of that work is a Telegram reminder bot that replies with a local Ollama model. Same idea, smaller: a model that answers from data we hold, not from the open web.</p>
 					<a class="btn btn-ghost" href="https://github.com/abhijitkumar39/personal-reminder-assistant" target="_blank" rel="noopener">Reminder assistant</a>
 				</div>
 
@@ -226,11 +243,12 @@
 					<p id="dock-copy">Scheduled spider. Rotating proxies when the site pushed back. Raw pull into MongoDB, then an ETL job into the gas feed.</p>
 				</div>
 
-				<div class="steps" role="tablist" aria-label="How a collect ran">
+				<div class="steps" role="tablist" aria-label="How a collect became a model">
 					<button type="button" data-step="spiders" aria-selected="true">Spiders</button>
 					<button type="button" data-step="proxies" aria-selected="false">Proxies</button>
 					<button type="button" data-step="store" aria-selected="false">Store</button>
 					<button type="button" data-step="watch" aria-selected="false">Watch</button>
+					<button type="button" data-step="model" aria-selected="false">Model</button>
 				</div>
 			</div>
 		</section>
@@ -265,6 +283,6 @@
 		<p><a href="mailto:abhijitkumar39@gmail.com">abhijitkumar39@gmail.com</a></p>
 	</footer>
 
-	<script src="assets/js/portfolio.js"></script>
+	<script src="assets/js/portfolio.js?v=4"></script>
 </body>
 </html>
