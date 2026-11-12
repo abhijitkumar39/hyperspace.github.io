@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/portfolio.css?v=5">
+	<link rel="stylesheet" href="assets/css/portfolio.css?v=9">
 </head>
 <body>
 	<a class="skip" href="#path">Skip to the path</a>
@@ -21,8 +21,10 @@
 			<span class="menu-bars" aria-hidden="true"></span>
 		</button>
 		<nav id="site-nav" class="nav-links">
-			<a href="#path">Path</a>
+			<a href="#visa">Visa Go</a>
 			<a href="#sources">Scrape</a>
+			<a href="#tab-mine">Mine</a>
+			<a href="#path">Path</a>
 			<a href="#contact">Contact</a>
 			<a class="nav-github" href="https://github.com/abhijitkumar39" target="_blank" rel="noopener">GitHub</a>
 		</nav>
@@ -33,34 +35,68 @@
 			<div class="hero-copy">
 				<p class="eyebrow"><span class="dot" aria-hidden="true"></span> Bengaluru · since 2019</p>
 				<h1>Abhijit <em>Kumar</em></h1>
-				<p class="role">I am a <span id="role" aria-live="polite">data engineer</span><span class="caret" aria-hidden="true"></span></p>
-				<p class="lede">Seven years turning someone else's messy data into a system that can be asked a question. The current one is Visa Go at Trantor: the backend and the chatbot for Visa's FIFA World Cup guests. Before that, SARCI, Awign, Way.com, and DecisionPoint.</p>
+				<p class="role">I build <span id="role" aria-live="polite">Visa Go</span><span class="caret" aria-hidden="true"></span></p>
+				<p class="lede">A guest asks where the match is. A spider brings a price back. A bot on my laptop answers from data I hold. Three stories. Visa Go is the one to open.</p>
 				<div class="hero-actions">
-					<a class="btn btn-primary" href="#path">Open the path</a>
-					<a class="btn btn-ghost" href="#sources">See the scrape</a>
+					<a class="btn btn-primary" href="#visa">Open Visa Go</a>
+					<a class="btn btn-ghost" href="#sources">Watch the scrape</a>
 				</div>
 			</div>
 
-			<aside class="now" aria-label="At a glance">
-				<p class="now-kicker">At a glance</p>
-				<dl>
-					<div>
-						<dt>Now</dt>
-						<dd>Trantor · since 2024</dd>
+			<aside class="pipe" aria-label="A live pass of the work">
+				<div class="pipe-top">
+					<span>Trantor · Bengaluru</span>
+					<strong>Live</strong>
+				</div>
+				<div class="pipe-stages">
+					<span>Collect</span>
+					<span>Clean</span>
+					<span>Ask</span>
+				</div>
+				<div class="pipe-window">
+					<div class="pipe-lane">
+						<span class="pill visa">Visa Go · kickoff 19:00</span>
+						<span class="pill fuel">Shell · $3.48</span>
+						<span class="pill park">SpotHero · bay 12 open</span>
+						<span class="pill home">Lennar · lot 14</span>
+						<span class="pill job">Indeed · data engineer</span>
+						<span class="pill visa">Tickets land tonight</span>
+						<span class="pill visa">Visa Go · kickoff 19:00</span>
+						<span class="pill fuel">Shell · $3.48</span>
+						<span class="pill park">SpotHero · bay 12 open</span>
+						<span class="pill home">Lennar · lot 14</span>
+						<span class="pill job">Indeed · data engineer</span>
+						<span class="pill visa">Tickets land tonight</span>
 					</div>
-					<div>
-						<dt>On</dt>
-						<dd>Visa Go · backend and chatbot</dd>
+					<div class="pipe-lane back">
+						<span class="pill park">ParkWhiz · airport</span>
+						<span class="pill visa">Hotel · 12 min away</span>
+						<span class="pill fuel">BP · $3.51</span>
+						<span class="pill job">Dice · backend</span>
+						<span class="pill home">KB Home · plan B</span>
+						<span class="pill visa">Weather · clear</span>
+						<span class="pill park">ParkWhiz · airport</span>
+						<span class="pill visa">Hotel · 12 min away</span>
+						<span class="pill fuel">BP · $3.51</span>
+						<span class="pill job">Dice · backend</span>
+						<span class="pill home">KB Home · plan B</span>
+						<span class="pill visa">Weather · clear</span>
 					</div>
-					<div>
-						<dt>Before that</dt>
-						<dd>DecisionPoint · software engineer</dd>
+					<div class="pipe-lane">
+						<span class="pill fuel">Chevron · station 441</span>
+						<span class="pill visa">Places · the ground</span>
+						<span class="pill park">PlugShare · charger</span>
+						<span class="pill job">Glassdoor · listing</span>
+						<span class="pill home">Pulte · community</span>
+						<span class="pill visa">Booking.com · still open</span>
+						<span class="pill fuel">Chevron · station 441</span>
+						<span class="pill visa">Places · the ground</span>
+						<span class="pill park">PlugShare · charger</span>
+						<span class="pill job">Glassdoor · listing</span>
+						<span class="pill home">Pulte · community</span>
+						<span class="pill visa">Booking.com · still open</span>
 					</div>
-					<div>
-						<dt>City</dt>
-						<dd>Bengaluru</dd>
-					</div>
-				</dl>
+				</div>
 			</aside>
 		</section>
 
@@ -77,6 +113,136 @@
 				<li>LLM data</li>
 				<li>Chatbot</li>
 			</ul>
+		</section>
+
+		<section id="stories" class="section">
+			<div class="section-head">
+				<p class="eyebrow">Stories</p>
+				<div>
+					<h2>One guest. Then the pipes. Then mine.</h2>
+					<p class="section-lede">Visa Go is the story to stay for. The scrape is how the data got trustworthy. The Telegram bot is the same idea, on my own time.</p>
+				</div>
+			</div>
+
+			<div class="story-switch" data-switcher>
+				<div class="story-tabs" role="tablist" aria-label="Stories">
+					<button type="button" role="tab" id="tab-visa" aria-controls="panel-visa" aria-selected="true">
+						<span>01 · Trantor</span>
+						<strong>Visa Go</strong>
+						<small>The guest story</small>
+					</button>
+					<button type="button" role="tab" id="tab-scrape" aria-controls="panel-scrape" aria-selected="false">
+						<span>02 · Way and after</span>
+						<strong>The scrape</strong>
+						<small>National brands</small>
+					</button>
+					<button type="button" role="tab" id="tab-mine" aria-controls="panel-mine" aria-selected="false">
+						<span>03 · Not a client</span>
+						<strong>Mine</strong>
+						<small>Telegram bot</small>
+					</button>
+				</div>
+
+				<article class="story-card" role="tabpanel" id="panel-visa" aria-labelledby="tab-visa">
+					<div class="story-copy">
+						<p class="stage-kicker">2024 – now · Backend and the match-day chatbot</p>
+						<h3 id="visa">A guest has a ticket. The match is somewhere else.</h3>
+						<div class="guests">
+							<b data-count="30000">30,000</b>
+							<span>sponsored guests, handled in the app</span>
+						</div>
+						<p>Visa sponsored the FIFA World Cup 2026 and the tickets. Visa Go is the invite-only app those guests used to accept a place and get through the day. At Trantor I built the backend under that, and the chatbot that answered when a person did not know where to go.</p>
+						<ol class="journey">
+							<li>Pass</li>
+							<li>Ask</li>
+							<li>Go</li>
+						</ol>
+						<ul>
+							<li>The chat covered the app and the sport: where the match is, when the tickets arrive, and the questions that show up the hour before kickoff.</li>
+							<li>Flights and hotels came back live through SerpAPI and Booking.com. A weather API and Google Places kept the answer tied to a ground, a forecast, and a place that was open.</li>
+						</ul>
+						<p class="chips"><span>Backend</span><span>Chatbot</span><span>SerpAPI</span><span>Booking.com</span><span>Weather</span><span>Places</span></p>
+					</div>
+					<div class="phone" data-chat>
+						<div class="phone-bar">
+							<img src="images/logos/visago.png" alt="">
+							<div>Visa Go<small>Match day</small></div>
+						</div>
+						<div class="phone-log" id="chat-log" aria-live="polite">
+							<p class="bubble guest">Where is the match, and when do I get the tickets?</p>
+							<p class="bubble bot">Kickoff is at the ground on your pass. Tickets land tonight.</p>
+							<p class="bubble guest">Find a flight and a hotel. What is the weather doing?</p>
+							<p class="bubble bot">Clear skies. A hotel twelve minutes out is still open. Flights are live.</p>
+						</div>
+						<div class="phone-sources">
+							<span data-source="places" class="on">Places</span>
+							<span data-source="weather" class="on">Weather</span>
+							<span data-source="booking" class="on">Booking.com</span>
+							<span data-source="serp" class="on">SerpAPI</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="story-card" role="tabpanel" id="panel-scrape" aria-labelledby="tab-scrape" hidden>
+					<div class="story-copy">
+						<p class="stage-kicker">The second story</p>
+						<h3>The brands went in. A model came out.</h3>
+						<p>Before Visa Go, the job was getting someone else's data in every day and making it clean enough to trust. At Way that became national spiders: fuel, parking, homes, and jobs. Proxies when a site pushed back. Raw pages in MongoDB. ETL after that.</p>
+						<p>Those tables were not a dump. Prices through the day, bays that were still open, listings that changed. That store trained an in-house LLM, so it answered from our prices and places.</p>
+						<p><a class="btn btn-primary" href="#sources">Open the board</a></p>
+					</div>
+					<div class="gates" aria-hidden="true">
+						<div class="gate">
+							<strong>Collect</strong>
+							<div class="gate-window">
+								<div class="gate-fall">
+									<span class="pill fuel">Shell</span><span class="pill park">SpotHero</span><span class="pill home">Lennar</span><span class="pill job">Indeed</span>
+									<span class="pill fuel">Shell</span><span class="pill park">SpotHero</span><span class="pill home">Lennar</span><span class="pill job">Indeed</span>
+								</div>
+							</div>
+						</div>
+						<div class="gate">
+							<strong>Clean</strong>
+							<div class="gate-window">
+								<div class="gate-fall">
+									<span class="pill fuel">$3.48 · typed</span><span class="pill park">bay 12 · open</span><span class="pill home">lot 14</span><span class="pill job">title · place</span>
+									<span class="pill fuel">$3.48 · typed</span><span class="pill park">bay 12 · open</span><span class="pill home">lot 14</span><span class="pill job">title · place</span>
+								</div>
+							</div>
+						</div>
+						<div class="gate">
+							<strong>Train</strong>
+							<div class="gate-window">
+								<div class="gate-fall">
+									<span class="pill visa">our prices</span><span class="pill visa">our places</span><span class="pill job">our listings</span><span class="pill visa">the model</span>
+									<span class="pill visa">our prices</span><span class="pill visa">our places</span><span class="pill job">our listings</span><span class="pill visa">the model</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="story-card" role="tabpanel" id="panel-mine" aria-labelledby="tab-mine" hidden>
+					<div class="story-copy">
+						<p class="stage-kicker">Personal · not a client</p>
+						<h3>A bot that answers from data I hold.</h3>
+						<p>The Telegram reminder assistant is mine. It replies with a local Ollama model. Same idea as the work, smaller: a question comes in, and the answer comes from something I run, not from the open web.</p>
+						<p>Visa Go was the guest story. The scrape was the pipes. This one is the version I built for myself.</p>
+						<p><a class="btn btn-ghost" href="https://github.com/abhijitkumar39/personal-reminder-assistant" target="_blank" rel="noopener">Reminder assistant</a></p>
+					</div>
+					<div class="phone mine-phone" aria-hidden="true">
+						<div class="phone-bar">
+							<div>Telegram<small>Local model</small></div>
+						</div>
+						<div class="phone-log">
+							<p class="bubble me">Remind me an hour before kickoff.</p>
+							<p class="bubble ollama">Set. I will ping you at 18:00, from the note you saved here.</p>
+							<p class="bubble me">Where did I leave the hotel link?</p>
+							<p class="bubble ollama">In yesterday's note. Twelve minutes from the ground.</p>
+						</div>
+					</div>
+				</article>
+			</div>
 		</section>
 
 		<section id="path" class="section">
@@ -262,8 +428,8 @@
 				</div>
 				<div class="brand-grid ai-note" data-lane-panel="ai" hidden>
 					<p>The model was not trained on a generic crawl. It learned our tables: a pump price that moved through the day, a parking bay that was still open, a home listing that changed, a job post that vanished. Ask where gas is cheaper, or which builder still has inventory, and the answer comes from that store.</p>
-					<p>The public cousin of that work is a Telegram reminder bot that replies with a local Ollama model. Same idea, smaller: a model that answers from data we hold, not from the open web.</p>
-					<a class="btn btn-ghost" href="https://github.com/abhijitkumar39/personal-reminder-assistant" target="_blank" rel="noopener">Reminder assistant</a>
+					<p>The version of this that is actually mine sits in the third story: a Telegram bot on a local Ollama model.</p>
+					<a class="btn btn-ghost" href="#tab-mine">See the personal bot</a>
 				</div>
 
 				<div class="dock" data-dock>
@@ -311,6 +477,6 @@
 		<p><a href="mailto:abhijitkumar39@gmail.com">abhijitkumar39@gmail.com</a></p>
 	</footer>
 
-	<script src="assets/js/portfolio.js?v=5"></script>
+	<script src="assets/js/portfolio.js?v=7"></script>
 </body>
 </html>
