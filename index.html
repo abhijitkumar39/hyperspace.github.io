@@ -120,7 +120,7 @@
 				<p class="eyebrow">Stories</p>
 				<div>
 					<h2>One guest. Then the pipes. Then mine.</h2>
-					<p class="section-lede">Visa Go is the story to stay for. The scrape is how the data got trustworthy. The Telegram bot is the same idea, on my own time.</p>
+					<p class="section-lede">Visa Go is the story to stay for. The scrape is how the data got trustworthy. The Telegram bot is my own project, a model I run at home.</p>
 				</div>
 			</div>
 
@@ -224,21 +224,23 @@
 
 				<article class="story-card" role="tabpanel" id="panel-mine" aria-labelledby="tab-mine" hidden>
 					<div class="story-copy">
-						<p class="stage-kicker">Personal · not a client</p>
-						<h3>A bot that answers from data I hold.</h3>
-						<p>The Telegram reminder assistant is mine. It replies with a local Ollama model. Same idea as the work, smaller: a question comes in, and the answer comes from something I run, not from the open web.</p>
-						<p>Visa Go was the guest story. The scrape was the pipes. This one is the version I built for myself.</p>
+						<p class="stage-kicker">Personal · a model I run</p>
+						<h3>A sentence in. A reminder, or an answer, out.</h3>
+						<p>This one is mine. A Telegram bot in front of a local model, Ollama running qwen3:4b on a Mac Mini. Tailscale is how I reach that machine, so the model stays at home and the chat still works from my phone.</p>
+						<p>I write to it the way I would write to a person. Ask it to schedule something and the model picks out the time and saves the reminder. Ask it a normal question and it answers. The typing mark appears the moment the message is sent, and stays up until the reply is ready.</p>
+						<p>Live search is the next piece, so a question about today can come back with something current instead of only what the model already knows.</p>
+						<p class="chips"><span>Telegram</span><span>Ollama</span><span>qwen3:4b</span><span>Mac Mini</span><span>Tailscale</span><span>SQLite</span></p>
 						<p><a class="btn btn-ghost" href="https://github.com/abhijitkumar39/personal-reminder-assistant" target="_blank" rel="noopener">Reminder assistant</a></p>
 					</div>
 					<div class="phone mine-phone" aria-hidden="true">
 						<div class="phone-bar">
-							<div>Telegram<small>Local model</small></div>
+							<div>Telegram<small>Typing…</small></div>
 						</div>
 						<div class="phone-log">
-							<p class="bubble me">Remind me an hour before kickoff.</p>
-							<p class="bubble ollama">Set. I will ping you at 18:00, from the note you saved here.</p>
-							<p class="bubble me">Where did I leave the hotel link?</p>
-							<p class="bubble ollama">In yesterday's note. Twelve minutes from the ground.</p>
+							<p class="bubble me">Remind me to buy groceries today at 6 in the evening.</p>
+							<p class="bubble ollama">Saved. I'll ping you today at 6.</p>
+							<p class="bubble me">What's latest in the news?</p>
+							<p class="bubble ollama">Not yet. Live search is next, so a question about today still waits.</p>
 						</div>
 					</div>
 				</article>
@@ -428,7 +430,7 @@
 				</div>
 				<div class="brand-grid ai-note" data-lane-panel="ai" hidden>
 					<p>The model was not trained on a generic crawl. It learned our tables: a pump price that moved through the day, a parking bay that was still open, a home listing that changed, a job post that vanished. Ask where gas is cheaper, or which builder still has inventory, and the answer comes from that store.</p>
-					<p>The version of this that is actually mine sits in the third story: a Telegram bot on a local Ollama model.</p>
+					<p>The personal one is a Telegram bot on a local Ollama model, running at home on a Mac Mini.</p>
 					<a class="btn btn-ghost" href="#tab-mine">See the personal bot</a>
 				</div>
 
