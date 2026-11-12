@@ -1,5 +1,5 @@
 (function () {
-	var phrases = ["data engineer", "pipeline lead", "applied AI"];
+	var phrases = ["Visa Go", "the scrape", "my own bot"];
 	var role = document.getElementById("role");
 	var index = 0;
 	var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -79,6 +79,13 @@
 			if (panel) panel.hidden = !on;
 		});
 	}
+
+	document.querySelectorAll('a[href="#tab-mine"]').forEach(function (link) {
+		link.addEventListener("click", function () {
+			var tab = document.getElementById("tab-mine");
+			if (tab) tab.click();
+		});
+	});
 
 	document.querySelectorAll("[data-switcher]").forEach(function (root) {
 		var tabs = Array.prototype.slice.call(root.querySelectorAll("[role='tab']"));
@@ -181,6 +188,70 @@
 			});
 		});
 		showBrand("shell");
+	}
+
+	var chat = document.querySelector("[data-chat]");
+	if (chat) {
+		var log = document.getElementById("chat-log");
+		var sourceNodes = chat.querySelectorAll("[data-source]");
+		var script = [
+			{ who: "guest", text: "Where is the match, and when do I get the tickets?", on: [] },
+			{ who: "bot", text: "Kickoff is at the ground on your pass. Tickets land tonight.", on: ["places"] },
+			{ who: "guest", text: "Find a flight and a hotel. What is the weather doing?", on: ["places"] },
+			{ who: "bot", text: "Clear skies. A hotel twelve minutes out is still open. Flights are live.", on: ["places", "weather", "booking", "serp"] }
+		];
+
+		function setSources(names) {
+			sourceNodes.forEach(function (node) {
+				node.classList.toggle("on", names.indexOf(node.getAttribute("data-source")) !== -1);
+			});
+		}
+
+		function showLine(line) {
+			var bubble = document.createElement("p");
+			bubble.className = "bubble " + line.who;
+			bubble.textContent = line.text;
+			log.appendChild(bubble);
+			setSources(line.on);
+		}
+
+		if (!reduced) {
+			var step = 0;
+			function playChat() {
+				log.textContent = "";
+				setSources([]);
+				step = 0;
+				var timer = window.setInterval(function () {
+					showLine(script[step]);
+					step += 1;
+					if (step >= script.length) {
+						window.clearInterval(timer);
+						window.setTimeout(playChat, 2600);
+					}
+				}, 1100);
+			}
+			playChat();
+		}
+	}
+
+	var counter = document.querySelector("[data-count]");
+	if (counter && !reduced && "IntersectionObserver" in window) {
+		var target = Number(counter.getAttribute("data-count"));
+		var started = false;
+		var watcher = new IntersectionObserver(function (entries) {
+			if (!entries[0].isIntersecting || started) return;
+			started = true;
+			var begin = performance.now();
+			function tick(now) {
+				var t = Math.min(1, (now - begin) / 1200);
+				var eased = 1 - Math.pow(1 - t, 3);
+				counter.textContent = Math.round(target * eased).toLocaleString("en-US");
+				if (t < 1) window.requestAnimationFrame(tick);
+			}
+			counter.textContent = "0";
+			window.requestAnimationFrame(tick);
+		}, { threshold: 0.6 });
+		watcher.observe(counter);
 	}
 
 	var form = document.getElementById("note-form");
