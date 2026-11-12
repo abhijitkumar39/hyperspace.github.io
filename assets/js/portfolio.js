@@ -1,5 +1,5 @@
 (function () {
-	var phrases = ["Visa Go", "the scrape", "my own bot"];
+	var phrases = ["backend", "chatbot", "live bookings"];
 	var role = document.getElementById("role");
 	var index = 0;
 	var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
